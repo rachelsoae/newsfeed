@@ -1,6 +1,0 @@
-@use 'mixins' as m;
-@use 'variables' as v;
-
-h1 {
-  @include m.brand-font;
-}
