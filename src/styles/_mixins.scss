@@ -1,0 +1,15 @@
+@mixin brand-font {
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 400;
+
+}
+
+@mixin header-font {
+  font-family: 'Martel', serif;
+  font-weight: 700;
+}
+
+@mixin body-font {
+  font-family: 'Cantarell', sans-serif;
+  font-weight: 400;
+}
