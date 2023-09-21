@@ -1,0 +1,8 @@
+@use '../styles/mixins' as *;
+@use '../styles/variables' as *;
+
+h1 {
+  @include brand-font;
+  font-size: 2.5rem;
+  color: $brand-color;
+}

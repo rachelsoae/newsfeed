@@ -1,0 +1,15 @@
+@use '../styles/mixins' as *;
+@use '../styles/variables' as *;
+
+* {
+  border-color: $brand-color;
+}
+
+html,
+body {
+  width: 100vw;
+}
+
+.App {
+  max-width: 1400px;
+}
