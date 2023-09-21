@@ -4,22 +4,50 @@ import Nav from './Nav';
 import Home from './Home';
 import ArticleDetail from './ArticleDetail';
 import Error from './Error';
-import data from '../mockData';
+import getData from '../apiCalls'
 
 const App = () => {
-  const [articles, setArticles] = useState(data.articles);
+  const [articles, setArticles] = useState([]);
+  const [article, setArticle] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  const cleanData = dataArray => {
+    return dataArray.filter(art => art.title !== '[Removed]')
+  }
+
+  useEffect(() => {
+    getData()
+    .then(data => setArticles(cleanData(data.articles)))
+    .then(() => setLoading(false))
+    .catch(err => setError(err))
+  })
 
   const formatDate = dateString => {
     const date = new Date(dateString).toString();
     return date.slice(0, 21);
   }
 
+  const updateArticle = id => {
+    const art = articles.find(elem => elem.publishedAt === id.slice(0, 20))
+    setArticle(art)
+  }
+
   return (
     <div className='App'>
       <Nav />
       <Routes>
-        <Route path='/' element={<Home articles={articles} formatDate={formatDate} />}/>
-        <Route path='/:id' element={<ArticleDetail articles={articles} formatDate={formatDate} />}/>
+        <Route path='/' element={<Home articles={articles} formatDate={formatDate} setLoading={setLoading} />}/>
+        <Route 
+          path='/:id' 
+          element={<ArticleDetail 
+            formatDate={formatDate} 
+            updateArticle={updateArticle} 
+            article={article} 
+            loading={loading} 
+            setLoading={setLoading} 
+          />}
+        />
         <Route path='/error' element={<Error />}/>
       </Routes>
     </div>
