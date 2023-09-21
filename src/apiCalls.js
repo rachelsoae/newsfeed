@@ -3,7 +3,9 @@ const getData = () => {
     method: 'GET',
     withCredentials: true,
     headers: {
-      'x-api-key': 'c3d72dc1e20444e5a1cd73e794e0a7b9'
+      // primary key c3d72dc1e20444e5a1cd73e794e0a7b9
+      // spare key 6d59076f146540638e13aaa6aab0c06c
+      'x-api-key': '6d59076f146540638e13aaa6aab0c06c'
     }
   })
   .then(response => {

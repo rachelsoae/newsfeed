@@ -5,6 +5,7 @@ import Home from './Home';
 import ArticleDetail from './ArticleDetail';
 import Error from './Error';
 import getData from '../apiCalls'
+import data from '../mockData'
 
 const App = () => {
   const [articles, setArticles] = useState([]);
@@ -21,7 +22,7 @@ const App = () => {
     .then(data => setArticles(cleanData(data.articles)))
     .then(() => setLoading(false))
     .catch(err => setError(err))
-  })
+  }, [])
 
   const formatDate = dateString => {
     const date = new Date(dateString).toString();

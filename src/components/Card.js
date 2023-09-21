@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Card = ({article, formatDate, setLoading}) => {
   return (
-    <Link to={`/${article.publishedAt}+${article.source.id}`} id={article.publishedAt} onClick={setLoading(true)}>
+    <Link to={`/${article.publishedAt}+${article.source.id}`} id={article.publishedAt} onClick={() => setLoading(true)}>
       <article className='Card'>
         <img className='Card__img' src={article.urlToImage}/>
         <span className='Card__text'>
