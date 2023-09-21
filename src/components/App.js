@@ -7,7 +7,7 @@ import Error from './Error';
 import data from '../mockData';
 
 const App = () => {
-  const [articles, getArticles] = useState(data.articles);
+  const [articles, setArticles] = useState(data.articles);
 
   return (
     <div className='App'>
