@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Nav from './Nav';
 import ArticleDetail from './ArticleDetail';
 import Card from './Card';
@@ -9,6 +9,7 @@ const App = () => {
     <div className='App'>
       <Nav />
       <main>
+        <Link to='/error'>Error</Link>
         {/* search */}
         {/* cards */}
       </main>
