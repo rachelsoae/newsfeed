@@ -5,7 +5,10 @@ const Home = ({articles, formatDate, setLoading}) => {
   
   return (
     <main className='Home'>
-      {/* search */}
+      <div className='Home__search'>
+        <label htmlfor='search'>Search</label>
+        <input type='search' id='search'/>
+      </div>
       {cards}
     </main>
   )

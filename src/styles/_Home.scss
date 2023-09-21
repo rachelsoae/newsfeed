@@ -1,7 +1,22 @@
+@use '../styles/mixins' as *;
+@use '../styles/variables' as *;
+
 .Home {
   width: 75%;
   margin: 0;
   a {
     text-decoration: none;
   }
+  .Home__search {
+    @include true-center;
+    margin: 2rem;
+    label {
+      @include body-font;
+    }
+    input {
+      width: 100%;
+      margin-left: 1rem;
+    }
+  }
+
 }

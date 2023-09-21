@@ -88,6 +88,20 @@ h1 {
 .Home a {
   text-decoration: none;
 }
+.Home .Home__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+.Home .Home__search label {
+  font-family: "Cantarell", sans-serif;
+  font-weight: 400;
+}
+.Home .Home__search input {
+  width: 100%;
+  margin-left: 1rem;
+}
 
 .Article {
   width: 75%;
