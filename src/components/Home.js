@@ -1,16 +1,14 @@
 import { Link } from 'react-router-dom';
 import Card from './Card';
 
-const Home = () => {
+const Home = ({articles}) => {
+  const cards = articles.map(article => <Card article={article} />)
+  
   return (
     <main className='Home'>
       <Link to='/error'>Error</Link>
       {/* search */}
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {cards}
     </main>
   )
 }
