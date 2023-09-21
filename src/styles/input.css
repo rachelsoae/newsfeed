@@ -12,6 +12,16 @@ body,
   flex-direction: column;
 }
 
+h2 {
+  font-family: "Martel", serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Cantarell", sans-serif;
+  font-weight: 400;
+}
+
 .Nav {
   width: 100%;
   box-shadow: 0px 4px 8px 0px rgba(108, 117, 125, 0.3137254902);
@@ -47,13 +57,9 @@ h1 {
   margin-left: 2em;
 }
 .Card .Card__text h2 {
-  font-family: "Martel", serif;
-  font-weight: 700;
   font-size: 1.25rem;
 }
 .Card .Card__text p {
-  font-family: "Cantarell", sans-serif;
-  font-weight: 400;
   font-size: 1.125rem;
 }
 .Card .Card__text .Card__details {
@@ -81,6 +87,36 @@ h1 {
 }
 .Home a {
   text-decoration: none;
+}
+
+.Article {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+.Article a {
+  font-family: "Cantarell", sans-serif;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+.Article .Article__header {
+  margin-top: 1rem;
+  border-top: 1px solid #CED4DA;
+  border-bottom: 1px solid #CED4DA;
+}
+.Article .Article__header h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+.Article .Article__body {
+  display: flex;
+  padding-top: 2rem;
+}
+.Article .Article__body img {
+  width: 55%;
+}
+.Article .Article__body .Article__content {
+  margin-left: 2rem;
 }
 
 /*# sourceMappingURL=input.css.map */

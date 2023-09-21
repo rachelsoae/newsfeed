@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom';
 
-const Card = ({article}) => {
-  const formatDate = dateString => {
-    const date = new Date(dateString).toString();
-    return date.slice(0, 21);
-  }
+const Card = ({article, formatDate}) => {
+
 
   return (
     <Link to={`/${article.publishedAt}+${article.source.id}`} id={article.publishedAt}>
