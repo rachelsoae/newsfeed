@@ -13,11 +13,9 @@
   .Card__text {
     margin-left: 2em;
     h2 {
-      @include header-font;
       font-size: 1.25rem;
     }
     p {
-      @include body-font;
       font-size: 1.125rem
     }
     .Card__details {
