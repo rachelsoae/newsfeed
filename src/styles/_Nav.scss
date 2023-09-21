@@ -1,6 +1,11 @@
 @use '../styles/mixins' as *;
 @use '../styles/variables' as *;
 
+.Nav {
+  box-shadow: $shadow;
+  @include true-center;
+}
+
 h1 {
   @include brand-font;
   font-size: 2.5rem;

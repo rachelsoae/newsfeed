@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Nav from './Nav';
 import ArticleDetail from './ArticleDetail';
 import Card from './Card';
+import Error from './Error';
 
 const App = () => {
   return (
