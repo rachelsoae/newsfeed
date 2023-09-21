@@ -4,7 +4,6 @@ import Nav from './Nav';
 import Home from './Home';
 import ArticleDetail from './ArticleDetail';
 import Error from './Error';
-import data from '../mockData';
 import getData from '../apiCalls'
 
 const App = () => {
