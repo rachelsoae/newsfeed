@@ -4,18 +4,3 @@
 @use './Home';
 @use './Error';
 @use './ArticleDetail';
-@use '../styles/mixins' as *;
-@use '../styles/variables' as *;
-
-
-* {
-  // border: teal solid 1px;
-}
-
-h2 {
-  @include header-font;
-}
-
-p {
-  @include body-font;
-}

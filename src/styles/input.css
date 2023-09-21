@@ -12,6 +12,16 @@ body,
   flex-direction: column;
 }
 
+h2 {
+  font-family: "Martel", serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Cantarell", sans-serif;
+  font-weight: 400;
+}
+
 .Nav {
   width: 100%;
   box-shadow: 0px 4px 8px 0px rgba(108, 117, 125, 0.3137254902);
@@ -107,16 +117,6 @@ h1 {
 }
 .Article .Article__body .Article__content {
   margin-left: 2rem;
-}
-
-h2 {
-  font-family: "Martel", serif;
-  font-weight: 700;
-}
-
-p {
-  font-family: "Cantarell", sans-serif;
-  font-weight: 400;
 }
 
 /*# sourceMappingURL=input.css.map */

@@ -14,3 +14,11 @@ body,
   align-items: center;
   flex-direction: column;
 }
+
+h2 {
+  @include header-font;
+}
+
+p {
+  @include body-font;
+}
