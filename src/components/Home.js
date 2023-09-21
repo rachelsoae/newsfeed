@@ -6,7 +6,7 @@ const Home = ({articles, formatDate, setLoading}) => {
   return (
     <main className='Home'>
       <div className='Home__search'>
-        <label htmlfor='search'>Search</label>
+        <label htmlFor='search'>Search</label>
         <input type='search' id='search'/>
       </div>
       {cards}
