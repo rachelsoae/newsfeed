@@ -7,7 +7,7 @@ const Card = ({article}) => {
   }
 
   return (
-    <Link to={`/12`} id={article.publishedAt}>
+    <Link to={`/${article.publishedAt}+${article.source.id}`} id={article.publishedAt}>
       <article className='Card'>
         <img className='Card__img' src={article.urlToImage}/>
         <span className='Card__text'>
