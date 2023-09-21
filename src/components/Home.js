@@ -6,7 +6,6 @@ const Home = ({articles}) => {
   
   return (
     <main className='Home'>
-      <Link to='/error'>Error</Link>
       {/* search */}
       {cards}
     </main>
