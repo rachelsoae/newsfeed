@@ -1,16 +1,16 @@
 @use '../styles/mixins' as *;
 @use '../styles/variables' as *;
 
-* {
-  border-color: $brand-color;
-}
-
 html,
-body {
-  width: 100vw;
+body,
+.App {
+  min-width: 100vw;
   margin: 0;
 }
 
 .App {
   max-width: 1400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

@@ -1,19 +1,19 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Nav from './Nav';
+import Home from './Home';
 import ArticleDetail from './ArticleDetail';
-import Card from './Card';
 import Error from './Error';
+import data from '../mockData';
 
 const App = () => {
+  const [articles, setArticles] = useState(data.articles);
+
   return (
     <div className='App'>
       <Nav />
-      <main>
-        <Link to='/error'>Error</Link>
-        {/* search */}
-        {/* cards */}
-      </main>
       <Routes>
+        <Route path='/' element={<Home articles={articles} />}/>
         <Route path='/:id' element={<ArticleDetail />}/>
         <Route path='/error' element={<Error />}/>
       </Routes>

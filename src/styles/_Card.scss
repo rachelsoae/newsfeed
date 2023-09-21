@@ -1,0 +1,48 @@
+@use '../styles/mixins' as *;
+@use '../styles/variables' as *;
+
+.Card {
+  width: 100%;
+  @include true-center;
+  margin: 2em 0;
+  padding: 1em;
+  .Card__img {
+    width: 35%;
+    border-radius: 2px;
+  }
+  .Card__text {
+    margin-left: 2em;
+    h2 {
+      @include header-font;
+      font-size: 1.25rem;
+    }
+    p {
+      @include body-font;
+      font-size: 1.125rem
+    }
+    .Card__details {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.Card:hover {
+  animation: fade-box-shadow 0.25s;
+  box-shadow: $shadow;
+  cursor: pointer;
+}
+
+@keyframes fade-box-shadow{
+  from {
+    box-shadow: none;
+  }
+
+  to {
+    box-shadow: $shadow;
+  }
+}
+
+
+
+
