@@ -1,2 +1,9 @@
 @use './App';
 @use './Nav';
+@use './Card';
+@use './Home';
+@use './Error';
+
+* {
+  // border: teal solid 1px;
+}

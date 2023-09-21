@@ -1,0 +1,33 @@
+* {
+  border-color: #5465FF;
+}
+
+html,
+body {
+  width: 100vw;
+  margin: 0;
+}
+
+.App {
+  max-width: 1400px;
+}
+
+.Nav {
+  box-shadow: 0px 4px 8px 0px rgba(108, 117, 125, 0.3137254902);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Nav__link {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #5465FF;
+}
+
+/*# sourceMappingURL=output.scss.map */
