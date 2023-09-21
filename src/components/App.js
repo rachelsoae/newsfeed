@@ -1,6 +1,21 @@
+import { Routes, Route } from 'react-router-dom';
+import Nav from './Nav';
+import ArticleDetail from './ArticleDetail';
+import Card from './Card';
+
 const App = () => {
   return (
-    <h1>NEWSFEED</h1>
+    <div className='App'>
+      <Nav />
+      <main>
+        {/* search */}
+        {/* cards */}
+      </main>
+      <Routes>
+        <Route path='/:id' element={<ArticleDetail />}/>
+        <Route path='/error' element={<Error />}/>
+      </Routes>
+    </div>
   );
 }
 
