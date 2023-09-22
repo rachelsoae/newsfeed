@@ -21,7 +21,7 @@ NEWSFEED allows users to conveniently browse top headlines in the United States.
 - Cypress
 
 ## Process:
-I started with a robust planning setup using Notion (view here)[https://soaespace.notion.site/Take-Home-News-Reader-1078db27cc59437388d61526d2868d6d?pvs=4]. I clearly defined my MVP and features and wrote user stories for all user flows, including acceptance criteria, which was later used as the basis for UI testing in Cypress. I created a detailed wireframe in Figma (view here)[https://www.figma.com/file/ZFZ4Env6ghAsznSYPJUGBU/Newsfeed?type=design&node-id=3%3A38&mode=dev], which streamlined my design decision-making and helped me to remain focused once I started coding.
+I started with a robust planning setup using Notion ([view here](https://soaespace.notion.site/Take-Home-News-Reader-1078db27cc59437388d61526d2868d6d?pvs=4)). I clearly defined my MVP and features and wrote user stories for all user flows, including acceptance criteria, which was later used as the basis for UI testing in Cypress. I created a detailed wireframe in Figma ([view here](https://www.figma.com/file/ZFZ4Env6ghAsznSYPJUGBU/Newsfeed?type=design&node-id=3%3A38&mode=dev)), which streamlined my design decision-making and helped me to remain focused once I started coding.
 
 I chose to use Sass (SCSS) over plain CSS because I enjoy the reusability of variables and mixins and use them frequently to keep my code DRY. This came in very handy when, partway through my build, I decided to change the primary color scheme. The choice to use Sass made this so easy!
 
