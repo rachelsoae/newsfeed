@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Card from './Card';
 
-const Home = ({articles, formatDate, loading, setLoading}) => {
+const Home = ({articles, formatDate, loading, setLoading, updateArticle}) => {
   const [searchTerm, setSearchTerm] = useState(''); 
   const [cards, setCards] = useState([]);
 
@@ -11,8 +11,7 @@ const Home = ({articles, formatDate, loading, setLoading}) => {
   }, [articles])
 
   const getAllCards = () => {
-    setCards(articles.map(article => <Card key={article.publishedAt} article={article} formatDate={formatDate} setLoading={setLoading} />))
-    setLoading(false)
+    setCards(articles.map(article => <Card key={article.publishedAt} article={article} formatDate={formatDate} setLoading={setLoading} updateArticle={updateArticle}/>))
   }
 
   const handleChange = (e) => {
@@ -24,9 +23,19 @@ const Home = ({articles, formatDate, loading, setLoading}) => {
     const filteredArticles = articles.filter(article => {
       return article.title.toLowerCase().includes(string) || article.description.toLowerCase().includes(string) || article.source.name.toLowerCase().includes(string) || formatDate(article.publishedAt).toLowerCase().includes(string)
     })
-    setCards(filteredArticles.length ? filteredArticles.map(article => <Card key={article.publishedAt} article={article} formatDate={formatDate} setLoading={setLoading} />) : <p>Sorry, no articles were returned that match your search</p>)
+    setCards(filteredArticles.length ? 
+      filteredArticles.map(article => {
+        return <Card 
+          key={article.publishedAt} 
+          article={article} 
+          formatDate={formatDate} 
+          setLoading={setLoading}
+          updateArticle={updateArticle} 
+        />
+      }) 
+      : 
+      <p>Sorry, no articles were returned that match your search</p>)
   }
-
 
   return (
     <>

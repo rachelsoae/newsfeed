@@ -11,19 +11,19 @@ import data from '../mockData'
 const App = () => {
   // if using mockData, remember to cleanData
   const [articles, setArticles] = useState([]);
-  const [article, setArticle] = useState({});
+  const [article, setArticle] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    setArticles(data.articles)
-  }, [])
-
   // useEffect(() => {
-  //   getData()
-  //   .then(data => setArticles(cleanData(data.articles)))
-  //   .catch(err => setError(err))
+  //   setArticles(data.articles)
   // }, [])
+
+  useEffect(() => {
+    getData()
+    .then(data => setArticles(cleanData(data.articles)))
+    .catch(err => setError(err))
+  }, [])
 
   const cleanData = dataArray => {
     return dataArray.filter(art => art.title !== '[Removed]')
@@ -36,7 +36,7 @@ const App = () => {
 
   const updateArticle = id => {
     const art = articles.find(elem => elem.publishedAt === id.slice(0, 20))
-    setArticle(art)
+    setArticle(art);
   }
 
   return (
@@ -50,14 +50,15 @@ const App = () => {
             formatDate={formatDate} 
             loading={loading}
             setLoading={setLoading} 
+            updateArticle={updateArticle}
           />}
         />
         <Route 
           path='/:id' 
           element={<ArticleDetail 
+            article={article}
             formatDate={formatDate} 
-            updateArticle={updateArticle} 
-            article={article} 
+            updateArticle={updateArticle}
             loading={loading} 
             setLoading={setLoading} 
           />}

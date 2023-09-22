@@ -1,11 +1,11 @@
 import { useParams, Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-const ArticleDetail = ({formatDate, updateArticle, article, loading, setLoading}) => {
+const ArticleDetail = ({article, formatDate, updateArticle}) => {
+  
   const id = useParams().id
   useEffect(() => {
     updateArticle(id);
-    setLoading(false);
   }, [])
 
   const formatContent = contentString => {
@@ -14,8 +14,8 @@ const ArticleDetail = ({formatDate, updateArticle, article, loading, setLoading}
   
   return (
     <>
-      {loading ? 
-      <h3>Loading</h3>
+      {!article ? 
+      <p>Loading...</p>
       :
       <div className='Article'>
         <Link to='/'>{"<"} Back</Link>
