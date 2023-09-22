@@ -1,6 +1,6 @@
 # NEWSFEED - Take Home Challenge
 
-![Preview of App](https://www.loom.com/embed/ab0236b5bcf04cac9b67ed3295d1bd0e?sid=5579d08d-38de-46b9-a2d9-70ca177aa163.gif)
+![Preview of App](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmtqMjc5cXpvMXJiNzVlMnNoaGN1eTJqbnphOXRqa2VydDNxZmx0MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26IqUyg8ri6PuyMhnX/giphy.gif)
 
 NEWSFEED allows users to conveniently browse top headlines in the United States. Search functionality allows the user to narrow down the selection by their preferred news source, topic, or other keyword. Clicking on an article provides additional details about the article, including authors, and conveniently links to the original article. 
 
