@@ -2,21 +2,25 @@
 @use '../styles/variables' as *;
 
 .Card {
-  width: 100%;
-  @include true-center;
+  width: 95%;
+  min-height: 12rem;
+  display: flex; 
   margin: 2em 0;
   padding: 1em;
   .Card__img {
-    width: 35%;
+    width: 40%;
+    object-fit: cover;
     border-radius: 2px;
   }
   .Card__text {
-    margin-left: 2em;
+    margin: 0 0 0 2em;
     h2 {
       font-size: 1.25rem;
+      margin: 0;
     }
     p {
-      font-size: 1.125rem
+      font-size: 1.125rem;
+      margin: 0.5rem 0;
     }
     .Card__details {
       display: flex;
@@ -41,6 +45,15 @@
   }
 }
 
-
+@media screen and (max-width: 900px) {
+  .Card {
+    flex-direction: column;
+    align-items: center;
+    .Card__img {
+      width: 80%;
+      margin-bottom: 2em;
+    }
+  }
+}
 
 
