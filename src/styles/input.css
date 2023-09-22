@@ -145,9 +145,19 @@ h1 {
 }
 .Article .Article__body img {
   width: 55%;
+  object-fit: cover;
 }
 .Article .Article__body .Article__content {
   margin-left: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .Article__body {
+    flex-direction: column;
+  }
+  .Article__body img {
+    align-self: center;
+  }
 }
 
 /*# sourceMappingURL=input.css.map */
