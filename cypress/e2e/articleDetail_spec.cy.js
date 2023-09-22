@@ -1,7 +1,11 @@
 describe('Article Detail page', () => {
   it('should display unique article details', () => {
+    cy.intercept('https://newsapi.org/v2/top-headlines?country=us', {
+      method: 'GET',
+      fixture: 'mockData'
+    })
     cy.visit('http://localhost:3000');
-    cy.get('.Home').children().first().click();
+    cy.get('h2').contains('United Auto Workers strike enters third day: Live updates - CNN').click();
     cy.get('p').contains('CNN')
       .get('h2').contains('United Auto Workers strike enters third day: Live updates - CNN')
       .get('p').contains('By Robert Ilich, CNN')
