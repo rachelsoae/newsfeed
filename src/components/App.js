@@ -8,7 +8,6 @@ import getData from '../apiCalls'
 import data from '../mockData'
 
 const App = () => {
-  // if using mockData, remember to cleanData
   const [articles, setArticles] = useState([]);
   const [article, setArticle] = useState(null);
   const [error, setError] = useState('');
