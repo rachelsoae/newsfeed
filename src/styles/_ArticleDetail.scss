@@ -23,9 +23,19 @@
     padding-top: 2rem;
     img {
       width: 55%;
+      object-fit: cover;
     }
     .Article__content {
       margin-left: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Article__body {
+    flex-direction: column;
+    img {
+      align-self: center;
     }
   }
 }

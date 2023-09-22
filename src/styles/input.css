@@ -15,12 +15,14 @@ body,
 h2 {
   font-family: "Martel", serif;
   font-weight: 700;
+  color: #212529;
 }
 
 p,
 input {
   font-family: "Cantarell", sans-serif;
   font-weight: 400;
+  color: #212529;
 }
 
 .Nav {
@@ -43,25 +45,27 @@ h1 {
 }
 
 .Card {
-  width: 100%;
+  width: 95%;
+  min-height: 12rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 2em 0;
   padding: 1em;
 }
 .Card .Card__img {
-  width: 35%;
+  width: 40%;
+  object-fit: cover;
   border-radius: 2px;
 }
 .Card .Card__text {
-  margin-left: 2em;
+  margin: 0 0 0 2em;
 }
 .Card .Card__text h2 {
   font-size: 1.25rem;
+  margin: 0;
 }
 .Card .Card__text p {
   font-size: 1.125rem;
+  margin: 0.5rem 0;
 }
 .Card .Card__text .Card__details {
   display: flex;
@@ -80,6 +84,16 @@ h1 {
   }
   to {
     box-shadow: 0px 4px 8px 0px rgba(108, 117, 125, 0.3137254902);
+  }
+}
+@media screen and (max-width: 900px) {
+  .Card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Card .Card__img {
+    width: 80%;
+    margin-bottom: 2em;
   }
 }
 .Home {
@@ -113,6 +127,7 @@ h1 {
 .Article a {
   font-family: "Cantarell", sans-serif;
   font-weight: 400;
+  color: #212529;
   margin-top: 2rem;
 }
 .Article .Article__header {
@@ -130,9 +145,19 @@ h1 {
 }
 .Article .Article__body img {
   width: 55%;
+  object-fit: cover;
 }
 .Article .Article__body .Article__content {
   margin-left: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .Article__body {
+    flex-direction: column;
+  }
+  .Article__body img {
+    align-self: center;
+  }
 }
 
 /*# sourceMappingURL=input.css.map */
