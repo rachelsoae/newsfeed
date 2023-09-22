@@ -4,25 +4,30 @@ import Nav from './Nav';
 import Home from './Home';
 import ArticleDetail from './ArticleDetail';
 import Error from './Error';
+import Card from './Card';
 import getData from '../apiCalls'
 import data from '../mockData'
 
 const App = () => {
-  const [articles, setArticles] = useState(data.articles);
+  // if using mockData, remember to cleanData
+  const [articles, setArticles] = useState([]);
   const [article, setArticle] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  useEffect(() => {
+    setArticles(data.articles)
+  }, [])
+
+  // useEffect(() => {
+  //   getData()
+  //   .then(data => setArticles(cleanData(data.articles)))
+  //   .catch(err => setError(err))
+  // }, [])
+
   const cleanData = dataArray => {
     return dataArray.filter(art => art.title !== '[Removed]')
   }
-
-  useEffect(() => {
-    getData()
-    .then(data => setArticles(cleanData(data.articles)))
-    .then(() => setLoading(false))
-    .catch(err => setError(err))
-  }, [])
 
   const formatDate = dateString => {
     const date = new Date(dateString).toString();
@@ -38,7 +43,15 @@ const App = () => {
     <div className='App'>
       <Nav />
       <Routes>
-        <Route path='/' element={<Home articles={articles} formatDate={formatDate} setLoading={setLoading} />}/>
+        <Route 
+          path='/' 
+          element={<Home 
+            articles={articles} 
+            formatDate={formatDate} 
+            loading={loading}
+            setLoading={setLoading} 
+          />}
+        />
         <Route 
           path='/:id' 
           element={<ArticleDetail 
@@ -51,7 +64,7 @@ const App = () => {
         />
         <Route path='/error' element={<Error />}/>
       </Routes>
-    </div>
+    </div>    
   );
 }
 
