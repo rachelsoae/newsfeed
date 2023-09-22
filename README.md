@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# NEWSFEED - Take Home Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![alt](URL of gif (add .gif to the end) or img)
 
-## Available Scripts
+NEWSFEED allows users to conveniently browse top headlines in the United States. Search functionality allows the user to narrow down the selection by their preferred news source, topic, or other keyword. Clicking on an article provides additional details about the article, including authors, and conveniently links to the original article. 
 
-In the project directory, you can run:
+## Installation Instructions:
+[//]: <> (What steps does a person have to take to get your app cloned down and running?)
+1. Fork this repository
+1. Clone it down to your machine
+1. `cd` into the directory
+1. Run `npm start` in the terminal to launch the application in your default browser
+  - When done vieweing, use `Control + C` to stop running the local server.
 
-### `npm start`
+- To view test suite, run `npm run cypress` *All tests passing at time of writing*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech:
+- JavaScript
+- Sass (SCSS)
+- React
+- Cypress
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Process:
+I started with a robust planning setup using Notion (view here)[https://soaespace.notion.site/Take-Home-News-Reader-1078db27cc59437388d61526d2868d6d?pvs=4]. I clearly defined my MVP and features and wrote user stories for all user flows, including acceptance criteria, which was later used as the basis for UI testing in Cypress. I created a detailed wireframe in Figma (view here)[https://www.figma.com/file/ZFZ4Env6ghAsznSYPJUGBU/Newsfeed?type=design&node-id=3%3A38&mode=dev], which streamlined my design decision-making and helped me to remain focused once I started coding.
 
-### `npm test`
+I chose to use Sass (SCSS) over plain CSS because I enjoy the reusability of variables and mixins and use them frequently to keep my code DRY. This came in very handy when, partway through my build, I decided to change the primary color scheme. The choice to use Sass made this so easy!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+UI testing was done using Cypress, though the test suite is not as robust as it could be. If I were to continue with this project, I would add thorough testing of all navigation points, including the logo/home button and back button on the ArticleDetail page. Given the scope and limit for this project, I chose not to test the external links to original sources, as those resulted in a chain of subsequent network requests and would have taken a lot of time to stub/test.
 
-### `npm run build`
+The most challenging part of this project was a bug where the ArticleDetail page threw an error because it was trying to use the state of `article` before it had been set to a real article. I conditionally rendered the ArticleDetail page based on the truthiness of `article`, but was still getting an error. In the end, I realized this was because I had set `article` to an initial state of `{}`, which, while empty, was still throwing a truthy value. I changed the initial state of `article` to `null` and voila! My conditional rendering solution now works.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![alt](URL of gif (add .gif to the end) or img)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
