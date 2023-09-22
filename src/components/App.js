@@ -4,7 +4,6 @@ import Nav from './Nav';
 import Home from './Home';
 import ArticleDetail from './ArticleDetail';
 import Error from './Error';
-import Card from './Card';
 import getData from '../apiCalls'
 import data from '../mockData'
 
@@ -12,7 +11,6 @@ const App = () => {
   // if using mockData, remember to cleanData
   const [articles, setArticles] = useState([]);
   const [article, setArticle] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   // useEffect(() => {
@@ -48,8 +46,6 @@ const App = () => {
           element={<Home 
             articles={articles} 
             formatDate={formatDate} 
-            loading={loading}
-            setLoading={setLoading} 
             updateArticle={updateArticle}
           />}
         />
@@ -59,8 +55,6 @@ const App = () => {
             article={article}
             formatDate={formatDate} 
             updateArticle={updateArticle}
-            loading={loading} 
-            setLoading={setLoading} 
           />}
         />
         <Route path='/error' element={<Error />}/>

@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import Card from './Card';
 
-const Home = ({articles, formatDate, loading, setLoading, updateArticle}) => {
+const Home = ({articles, formatDate, updateArticle}) => {
   const [searchTerm, setSearchTerm] = useState(''); 
   const [cards, setCards] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getAllCards()
