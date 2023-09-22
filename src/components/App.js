@@ -8,7 +8,7 @@ import getData from '../apiCalls'
 import data from '../mockData'
 
 const App = () => {
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState(data.articles);
   const [article, setArticle] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');

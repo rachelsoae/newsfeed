@@ -1,7 +1,23 @@
+@use '../styles/mixins' as *;
+@use '../styles/variables' as *;
+
 .Home {
   width: 75%;
   margin: 0;
   a {
     text-decoration: none;
+  }
+  .Home__search {
+    @include true-center;
+    margin: 2rem;
+    input {
+      width: 100%;
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border: 0.5px solid $accent-dark;
+      background: $accent-light;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) inset;
+      height: 1.75rem;
+    }
   }
 }
