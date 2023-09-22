@@ -29,6 +29,8 @@ UI testing was done using Cypress, though the test suite is not as robust as it 
 
 The most challenging part of this project was a bug where the ArticleDetail page threw an error because it was trying to use the state of `article` before it had been set to a real article. I conditionally rendered the ArticleDetail page based on the truthiness of `article`, but was still getting an error. In the end, I realized this was because I had set `article` to an initial state of `{}`, which, while empty, was still throwing a truthy value. I changed the initial state of `article` to `null` and voila! My conditional rendering solution now works.
 
-![alt](URL of gif (add .gif to the end) or img)
+Thanks for the opportunity to build something for you!
+<br>
+![kermit goodbye](https://media.giphy.com/media/DBPF1cNxSwrziGneX7/giphy.gif)
 
 
