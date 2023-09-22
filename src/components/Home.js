@@ -17,12 +17,12 @@ const Home = ({articles, formatDate, setLoading}) => {
     const filtered = articles.filter(article => {
       return article.title.toLowerCase().includes(searchTerm) || article.description.toLowerCase().includes(searchTerm) || article.source.name.toLowerCase().includes(searchTerm) || formatDate(article.publishedAt).toLowerCase().includes(searchTerm)
     })
-    return filtered ? filtered : setSearchTerm('')
+    return filtered;
   }
 
   const getCards = (searchTerm = null) => {
     const forDisplay = searchTerm ? filterArticles() : articles;
-    setCards(forDisplay ? forDisplay.map(article => <Card key={article.publishedAt} article={article} formatDate={formatDate} setLoading={setLoading} />) : [])
+    setCards(forDisplay.length ? forDisplay.map(article => <Card key={article.publishedAt} article={article} formatDate={formatDate} setLoading={setLoading} />) : <p>Sorry, no articles were returned that match your search</p>)
   }
 
   return (
