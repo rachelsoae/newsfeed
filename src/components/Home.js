@@ -26,7 +26,6 @@ const Home = ({articles, formatDate, setLoading}) => {
   }
 
   return (
-    // {loading ?}
     <main className='Home'>
       <div className='Home__search'>
         <label htmlFor='search'>
